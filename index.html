@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="index.css">
+  <script type='text/javascript'>
+    function onClickDescription(btnId) {
+      var x = document.getElementById("description");
+      var y = document.getElementById("composition");
+      var z = document.getElementById("conseil");
+      var titre = document.getElementById("section-titre");
+      var text = document.getElementById("section-text");
+
+      switch (btnId) {
+        case "description":
+          x.classList.add("selected");
+          y.classList.remove("selected");
+          z.classList.remove("selected");
+          titre.innerHTML = "Texte de description";
+          text.innerHTML = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.";
+          break;
+        case "composition":
+          x.classList.remove("selected");
+          y.classList.add("selected");
+          z.classList.remove("selected");
+          titre.innerHTML = "Texte de composition";
+          text.innerHTML = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.";
+          break;
+        case "conseil":
+          x.classList.remove("selected");
+          y.classList.remove("selected");
+          z.classList.add("selected");
+          titre.innerHTML = "Texte de conseil";
+          text.innerHTML = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.";
+          break;
+      }
+
+    }
+  </script>
+</head>
+
+<body>
+
+  <!--Section Header-->
+
+  <div class="font main-container">
+    <div class="header">
+      <img src="images/logo.svg" alt="Logo">
+    </div>
+    <div class="section-banner">
+      <img src="images/banniere-desktop.jpg" alt="Banner" class="banner">
+    </div>
+    <div>
+      <div class="row">
+        <div class="col text-center spacing mt-5">
+          <button href="#content" class="btn btn-dark">Voir la suite</button>
+        </div>
+      </div>
+    </div>
+    <div>
+
+
+      <div class="row">
+        <div class="col text-center mt-5">
+          <button id="description" onclick="onClickDescription('description');" class="btn btn-outline-dark selected"
+            type="button" aria-controls="description">
+            DESCRIPTION
+          </button>
+
+          <button id="composition" onclick="onClickDescription('composition');" class="btn btn-outline-dark"
+            type="button" aria-controls="composition">
+            COMPOSITION
+          </button>
+
+          <button id="conseil" onclick="onClickDescription('conseil');" class="btn btn-outline-dark" type="button"
+            aria-controls="conseil">
+            CONSEIL
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <section class="mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h2 id="section-titre" class="heading-2 mb-4">Texte de description</h2>
+          <p id="section-text" class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
+        </div>
+      </div>
+    </section>
+
+    <div>
+      <div class="row">
+        <div class="col text-center mb-5">
+          <button class="btn-lire" type="button">
+            Lire +
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--Section Picto-->
+
+    <section class="features">
+      <div class="container w-100 spacing mt-5">
+        <h2 class="heading-1 mb-5">NOS SERVICES</h2>
+        <div class="picto-container">
+          <div class="col-md-4 mb-5 mb-md-0">
+            <div class="picto-section d-flex align-items-center">
+              <img src="images/picto1.jpg" alt="Icone 1" class="picto mr-3">
+              <h3 class="text-picto mb-0">FLACON
+                RECYCLABLE</h3>
+            </div>
+          </div>
+          <div class="col-md-4 mb-5 mb-md-0">
+            <div class="picto-section d-flex align-items-center">
+              <img src="images/picto2.jpg" alt="Icone 2" class="picto mr-3">
+              <h3 class="text-picto mb-0">PRODUIT
+                RECHARGEABLE</h3>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="picto-section d-flex align-items-center">
+              <img src="images/picto3.jpg" alt="Icone 3" class="picto mr-3">
+              <h3 class="text-picto mb-0">ECHANTILLONS
+                OFFERTS</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Section Carrousel-->
+
+    <div class="carousel-border">
+      <div id="carouselExampleControls" class="carousel spacing-section" data-bs-ride="carousel">
+        <div class="carousel-title">
+          <h2 class="heading-1">CARROUSEL</h2>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card">
+                <div class="card-body">
+
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+
+                <div class="card-body">
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <div class="card-body">  
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Card title 9</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!--Section Bouton-->
+
+    <section class="button-section my-5 ">
+      <div class="container">
+        <div class="button-wrapper">
+          <div class="dropdown">
+            <button class="btn btn-outline-dark dropdown-toggle selected" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Afficher tous les blocs
+            </button>
+            <ul class="dropdown-menu dropdown-style" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#bloc1">BLOC 1</a></li>
+              <li><a class="dropdown-item" href="#bloc2">BLOC 2</a></li>
+              <li><a class="dropdown-item" href="#bloc3">BLOC 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+  </section>
+
+  <!--Section Bloc-->
+
+  <section class="banner-section mt-5" id="bloc1">
+    <div class="container-block">
+      <div class="banner-block">
+        <div class="banner-content">
+          <div class="banner-img-left">
+            <img src="images/bloc1.jpg" alt="Image 1">
+          </div>
+          <div class="banner-text">
+            <h2>BLOC 1 </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="banner-section mt-3" id="bloc2">
+    <div class="container-block">
+      <div class="banner-block">
+        <div class="banner-content">
+          <div class="banner-img-right">
+            <img src="images/bloc2.jpg" alt="Image 2">
+          </div>
+          <div class="banner-text">
+            <h2>BLOC 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="banner-section mt-3" id="bloc3">
+    <div class="container-block">
+      <div class="banner-block">
+        <div class="banner-content">
+          <div class="banner-img-left">
+            <img src="images/bloc3.jpg" alt="Image 3">
+          </div>
+          <div class="banner-text">
+            <h2>BLOC 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+
+  <div class="footer mt-5">
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+  <script src="./dist/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+  <script src="carousel.js"></script>
+</body>
+
+</html>

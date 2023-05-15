@@ -309,7 +309,7 @@
 }
 
 
-@media (max-width: 1400px) {
+@media (max-width: 1000px) {
   .btn {
     padding: 10px 10px;
     width: 50vw;
